@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
+    @posts = Post.all.order("created_at DESC")
   end
 
   def show
@@ -25,7 +26,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update
+    if @post.update(post_params)
       redirect_to @post
     else
       render 'edit'
