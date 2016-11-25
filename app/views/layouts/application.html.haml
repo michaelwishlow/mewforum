@@ -2,12 +2,22 @@
 %html
 %head
   %title MewfForum
-  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  %link{ "rel" => "stylesheet", href: "https://fonts.googleapis.com/css?family=Lato:300,400,700", type: "text/css"} 
   = javascript_include_tag 'application', 'data-turbolinks-track' => true 
   = csrf_meta_tags
 %body
-  %p.notice= notice
-  %p.alert= alert
+  %header.main_header
+    #logo 
+      %p Mewforum
+    #buttons
+      = link_to "New Post", new_post_path
 
-  =yield
+
+  .wrapper
+    %p.notice= notice
+    %p.alert= alert
+
+  .wrapper
+    = yield
 
