@@ -4,14 +4,16 @@
   %title MewfForum
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
   %link{ "rel" => "stylesheet", href: "https://fonts.googleapis.com/css?family=Lato:300,400,700", type: "text/css"} 
+  %link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"}/
   = javascript_include_tag 'application', 'data-turbolinks-track' => true 
   = csrf_meta_tags
 %body
-  %header.main_header
-    #logo 
-      %p Mewforum
-    #buttons
-      = link_to "New Post", new_post_path
+  %header.main_header.clearfix
+    .wrapper
+      #logo 
+        %p Mewforum
+      #buttons
+        = link_to "New Post", new_post_path
 
 
   .wrapper
