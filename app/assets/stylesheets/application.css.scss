@@ -42,9 +42,9 @@ body {
 		float: left;
 		a {
 			text-transform: uppercase;
-			font-weight: 700;
+			font-weight: 800;
 			letter-spacing: -1px;
-			font-size: 1.2rem;
+			font-size: 1.5rem;
 			text-decoration: none;
 			color:#397CAC;
 		}
@@ -85,5 +85,23 @@ body {
 			font-size: 0.9rem;
 			color: #B2BAC2;
 		}
+	}
+}
+
+#post_content {
+	background: white;
+	padding: 2em 5%;
+	border-radius: .5em;
+	h1 {
+	 font-weight: 100;
+	 font-size: 2em;
+	 colour: #397CAC;
+	 margin-top: 0;
+	}
+	p {
+	  colour: #B2BAC2;
+	  font-size: 0.9rem;
+	  font-weight: 100;
+	  line-height: 1.5;
 	}
 }
